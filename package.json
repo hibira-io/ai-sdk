@@ -1,0 +1,85 @@
+{
+  "name": "@hibira-io/ai-sdk",
+  "version": "0.1.0",
+  "description": "Vercel AI SDK transport over Hibira (Pusher-compatible) channels: useChat answers that survive reconnects and reloads, stream to every tab and device, and keep going after the browser leaves",
+  "keywords": [
+    "ai",
+    "ai-sdk",
+    "vercel-ai-sdk",
+    "usechat",
+    "chat-transport",
+    "resumable-streams",
+    "streaming",
+    "llm",
+    "pusher",
+    "pusher-js",
+    "websocket",
+    "realtime",
+    "hibira"
+  ],
+  "homepage": "https://hibira.io",
+  "bugs": {
+    "url": "https://github.com/hibira-io/ai-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hibira-io/ai-sdk.git"
+  },
+  "license": "MIT",
+  "author": "Hibira (https://hibira.io)",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./server": {
+      "types": "./server.d.ts",
+      "default": "./server.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "server.js",
+    "server.d.ts",
+    "protocol.js",
+    "protocol.d.ts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:e2e": "node --test test/e2e/*.e2e.mjs",
+    "typecheck": "tsc -p test/tsconfig.json"
+  },
+  "peerDependencies": {
+    "ai": ">=5",
+    "pusher-js": ">=7"
+  },
+  "peerDependenciesMeta": {
+    "ai": {
+      "optional": true
+    },
+    "pusher-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "ai": "^7.0.159",
+    "pusher": "^5.3.4",
+    "pusher-js": "^8.6.0",
+    "typescript": "^5.9.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
